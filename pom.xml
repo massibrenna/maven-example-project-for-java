@@ -104,7 +104,10 @@
 				<configuration>
 					<!-- The -source argument for the Java compiler. 1.7 stand for Java 
 						7. -->
-					
+					<source>17</source>
+					<!-- The -target argument for the Java compiler. 1.7 stand for Java 
+						7. -->
+					<target>17</target>
 					<!-- Show source locations where deprecated APIs are used. -->
 					<showDeprecation>true</showDeprecation>
 					<!-- Show compilation warnings. -->
