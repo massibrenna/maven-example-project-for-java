@@ -24,7 +24,7 @@ import java.io.IOException;
 
 /**
  * Test main class.
- * @author Fabio Pirola <fabio@pirola.org>
+ * @author Massimiliano Brenna
  * @version 1.0
  * @since 2015-07-15
  */

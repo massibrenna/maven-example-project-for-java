@@ -13,17 +13,17 @@
 	<description>Maven example project that cover most of the maven lifecycle (validation source code, JAR package, ...)</description>
 	<inceptionYear>2015</inceptionYear>
 	<organization>
-		<name>Fabio Pirola</name>
+		<name>Massimiliano Brenna</name>
 		<url>//pirola.org</url>
 	</organization>
 	<url>//pirola.org</url>
 
 	<developers>
 		<developer>
-			<id>ID...</id>
-			<name>Fabio Pirola</name>
-			<email>FABIO ...(N0T SPAM ME)... AT PIROLA DoT ORG</email>
-			<url>//pirola.org</url>
+			<id>ID12345</id>
+			<name>Massimiliano Brenna</name>
+			<email>massimiliano.brenna@nttdata.com</email>
+			<url>//massib.org</url>
 			<roles>
 				<role>Developer</role>
 			</roles>
@@ -156,28 +156,18 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>3.0.3</version>
-				<configuration>
-					<!-- Max level of analisys and error reporting. -->
-					<effort>Max</effort>
-					<!-- Build should fail upon a violation. -->
-					<failOnError>true</failOnError>
-					<!-- Low level for threshold. -->
-					<threshold>Low</threshold>
-				</configuration>
-				<executions>
-					<!-- Ensures that FindBugs inspects source code when project is compiled. -->
-					<execution>
-						<id>analyze-compile</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>4.7.2.1</version>
+				<dependencies>
+					<!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
+					<dependency>
+					<groupId>com.github.spotbugs</groupId>
+					<artifactId>spotbugs</artifactId>
+					<version>4.7.3</version>
+					</dependency>
+				</dependencies>
+				</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
